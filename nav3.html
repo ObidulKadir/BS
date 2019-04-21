@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>navigation tab practice</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="nav3.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul class="navbar nav-tabs" >
+      <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Menu 1</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Menu 2</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Menu 3</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Menu 4</a></li>
+    </ul>
+  </nav>
+  <hr>
+  <ul class="nav nav-tabs" >
+    <li class="nav-item"><a class="nav-link active" href="">Menu 1</a></li>
+    <li class="nav-item dropdown dropright"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Menu 2
+  <span class="caret" ></span></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="">link</a>
+          <a class="dropdown-item" href="">link</a>
+
+        </div>
+
+    </li>
+    <li class="nav-item"><a class="nav-link" href="">Menu 3</a></li>
+    <li class="nav-item"><a class="nav-link" href="">Menu 4</a></li>
+    <li class="nav-item"><a class="nav-link" href="">Menu 5</a></li>
+  </ul>
+  <hr>
+  <hr>
+  <div class="container">
+    <h2>Multi-Level Dropdowns</h2>
+    <p>In this example, we use jQuery to open multi-level dropdowns on click (see script section below).</p>
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a  href="#">HTML</a></li>
+        <li><a  href="#">CSS</a></li>
+        <li>
+          <a class="test" href="#">New dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a  href="#">2nd level dropdown</a></li>
+            <li><a  href="#">2nd level dropdown</a></li>
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    $('.dropdown a.test').on("click", function(e){
+      $(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  });
+  </script>
+
+
+
+</body>
+</html>

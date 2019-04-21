@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multi level dropdown practice part -2</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Muc 2k14 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu ">
+                <li><a href="">Mohit</a></li>
+                <li><a href="">Mondol</a></li>
+                <li><a href="">Saiful</a></li>
+                <li><a href="">Jisan</a></li>
+                <li>
+                   <a class="text" href="">Kadir <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropright">
+                        <li><a href="">r</a></li>
+                    </ul>
+                </li>
+                 
+            </ul>
+        </div>
+    </div>
+    
+    <script>   
+        $(document).ready(function(){
+            $('.dropdown a.text').on('click', function(e){
+                $(this).next('ul').toggle();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>

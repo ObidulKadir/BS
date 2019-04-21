@@ -1,0 +1,45 @@
+body{
+   margin:0;
+   padding: 0;
+}
+
+img{
+  height: 60px;
+      width: 10%;
+
+}
+.navbar{
+  background: #F4EEE1;
+  border-radius: 10px;
+}
+.nav-item{
+  list-style-type: none;
+
+  padding:10px;
+  background: white;
+  margin-left: 10px;
+border: 1px solid red;
+  border-radius: 0px 15px;
+
+}
+.nav-item:nth-child(1){
+  margin-left: 0;
+}
+.nav-link{
+  color: green;
+  font-weight: bold;
+}
+.nav-item:hover{
+  background-color:red;
+  border: 1px solid ;
+  border-bottom: 15px solid white;
+
+}
+.nav-link:hover{
+  color: white;
+  font-weight: bold;
+}
+nav{
+  margin-top: 10px;
+  height: 100px;
+}
